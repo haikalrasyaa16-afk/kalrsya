@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haikal Rasya Ramadhan - Personal Profile</title>
+    
+    <!-- Google Fonts untuk Typography yang Menarik -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome untuk Ikon pada Tombol -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* --- VARIABEL & GAYA GLOBAL --- */
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --primary-color: #007bff;
+            --primary-hover-color: #0056b3;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- KONTAINER UTAMA --- */
+        .profile-container {
+            background-color: var(--card-bg-color);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- FOTO PROFIL --- */
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--primary-color);
+        }
+
+        /* --- TEKS PROFIL --- */
+        .profile-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .profile-bio {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+
+        /* --- GRID UNTUK TOMBOL --- */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* --- STYLE TOMBOL --- */
+        .link-button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 15px;
+            background-color: #222;
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 12px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .link-button:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+            border-color: var(--primary-hover-color);
+        }
+
+        .link-button i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .link-button span {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* --- RESPONSIVITAS --- */
+        @media (max-width: 600px) {
+            .profile-container {
+                padding: 30px 20px;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+            }
+
+            .links-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="profile-container">
+        <!-- Gambar Profil (Menggunakan placeholder, ganti dengan URL foto Anda jika ada) -->
+        <img src="https://i.ibb.co/6yFfHrC/profile-pic-placeholder.png" alt="Foto Profil Haikal" class="profile-img">
+
+        <!-- Nama dan Bio -->
+        <h1 class="profile-name">Haikal Rasya Ramadhan</h1>
+        <p class="profile-bio">
+            Saya lahir di Depok pada tanggal 16 September 2007. Sebagai seorang yang energik, saya mengisi waktu luang dengan bermain badminton, sebuah olahraga yang mengajarkan saya tentang ketangkasan, strategi, dan konsistensi.
+        </p>
+
+        <!-- Grid Tombol Link -->
+        <div class="links-grid">
+            <!-- ChatGPT -->
+            <a href="https://chat.openai.com/" target="_blank" class="link-button" title="ChatGPT">
+                <i class="fa-regular fa-comment-dots"></i>
+                <span>ChatGPT</span>
+            </a>
+            <!-- Gemini -->
+            <a href="https://gemini.google.com/" target="_blank" class="link-button" title="Google Gemini">
+                <i class="fa-solid fa-star"></i>
+                <span>Gemini</span>
+            </a>
+            <!-- DeepSeek -->
+            <a href="https://chat.deepseek.com/" target="_blank" class="link-button" title="DeepSeek">
+                <i class="fa-solid fa-robot"></i>
+                <span>DeepSeek</span>
+            </a>
+            <!-- Z.ai -->
+            <a href="https://z.ai/" target="_blank" class="link-button" title="Z.ai">
+                <i class="fa-solid fa-brain"></i>
+                <span>Z.ai</span>
+            </a>
+            <!-- Meta AI -->
+            <a href="https://www.meta.ai/" target="_blank" class="link-button" title="Meta AI">
+                <i class="fa-solid fa-infinity"></i>
+                <span>Meta AI</span>
+            </a>
+            <!-- Perplexity -->
+            <a href="https://www.perplexity.ai/" target="_blank" class="link-button" title="Perplexity">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Perplexity</span>
+            </a>
+            <!-- You.com -->
+            <a href="https://you.com/" target="_blank" class="link-button" title="You.com">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>You.com</span>
+            </a>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Haikal Rasya Ramadhan. Dibuat dengan <i class="fa-solid fa-heart" style="color: var(--primary-color);"></i> dan HTML/CSS.</p>
+        </footer>
+    </main>
+
+</body>
+</html>

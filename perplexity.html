@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoRide Mobility - Menggerakkan Masa Depan Ramah Lingkungan</title>
+<style>
+  /* Reset & base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9fdfb;
+  }
+  a {
+    color: #00796b;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  /* Layout */
+  header {
+    background: #004d40;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  nav ul li a {
+    color: #b2dfdb;
+    font-weight: 600;
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+  /* Hero section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 70vh;
+    color: #e0f2f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    text-shadow: 1px 1px 6px #004d40cc;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    max-width: 600px;
+    margin-bottom: 1rem;
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 450px;
+    margin-bottom: 2rem;
+  }
+  .btn-cta {
+    background: #00796b;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: max-content;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  .btn-cta:hover {
+    background: #004d40;
+  }
+  /* Keunggulan */
+  .features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background: #e0f2f1;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .feature-item {
+    max-width: 280px;
+    margin: 1rem;
+  }
+  .feature-item h3 {
+    color: #004d40;
+    margin-bottom: 0.8rem;
+  }
+  .feature-item p {
+    color: #00695c;
+    font-weight: 500;
+  }
+  /* Footer */
+  footer {
+    background: #004d40;
+    color: #b2dfdb;
+    padding: 1.5rem 2rem;
+    text-align: center;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      background: #00332e;
+      position: fixed;
+      top: 60px;
+      right: -100%;
+      width: 200px;
+      transition: right 0.3s ease;
+      height: calc(100% - 60px);
+      padding-top: 2rem;
+    }
+    nav ul.active {
+      right: 0;
+    }
+    nav ul li {
+      margin: 1rem 0;
+    }
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EcoRide Mobility</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Tentang Kami</a></li>
+      <li><a href="#">Produk</a></li>
+      <li><a href="#">Portofolio</a></li>
+      <li><a href="#">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Menggerakkan Masa Depan Ramah Lingkungan</h1>
+  <p>Temukan e-bike terbaru kami dengan teknologi canggih dan ramah lingkungan.</p>
+  <button class="btn-cta" onclick="alert('Pelajari produk kami segera!')">Pelajari Produk Kami</button>
+</section>
+
+<section class="features">
+  <div class="feature-item">
+    <h3>Ramah Lingkungan</h3>
+    <p>Kurangi jejak karbon Anda dengan solusi mobilitas hijau dari EcoRide.</p>
+  </div>
+  <div class="feature-item">
+    <h3>Teknologi Terkini</h3>
+    <p>Baterai tahan lama dan smart control untuk pengalaman berkendara tak tertandingi.</p>
+  </div>
+  <div class="feature-item">
+    <h3>Layanan Purna Jual</h3>
+    <p>Garansi komprehensif dan pelayanan cepat untuk kepuasan pelanggan.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 EcoRide Mobility. All rights reserved. | Jl. EcoRide No.7, Jakarta, Indonesia</p>
+</footer>
+
+</body>
+</html>
